@@ -596,6 +596,7 @@ class UploadForm(FlaskForm):
 	end_date = DateField('End Date')
 	end_time = TimeField('End Time', default=datetime.utcnow()+timedelta(hours=5.5))
 	calc = BooleanField('Enable Calculator')
+	
 	neg_mark = DecimalField('Enable negative marking in % ', validators=[NumberRange(min=0, max=100)])
 	duration = IntegerField('Duration(in min)')
 	password = PasswordField('Exam Password', [validators.Length(min=3, max=6)])
